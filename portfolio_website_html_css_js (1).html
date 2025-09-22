@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Salman — Web Design | Lead Gen | YouTube SEO</title>
+  <meta name="description" content="I design websites (WordPress), provide lead generation services and do YouTube SEO to rank videos. View my portfolio and contact me.">
+  <meta name="author" content="Salman">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Salman — Web Design & YouTube SEO">
+  <meta property="og:description" content="WordPress development, Lead Generation, YouTube SEO services. Portfolio & contact.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/og-image.png">
+
+  <!-- JSON-LD Basic Person for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Salman",
+    "url": "https://example.com",
+    "sameAs": ["https://www.youtube.com/yourchannel","https://www.linkedin.com/in/you"],
+    "jobTitle": "Web Designer & SEO Specialist",
+    "description": "WordPress web design, Lead Generation, YouTube SEO."
+  }
+  </script>
+
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#071029 0%, #061221 100%);color:#e6eef8;line-height:1.5}
+    a{color:var(--accent);text-decoration:none}
+    header{position:sticky;top:0;backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(3,7,18,0.6), rgba(3,7,18,0.4));border-bottom:1px solid rgba(255,255,255,0.03);z-index:50}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    .nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:700}
+    .brand .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .cta{background:linear-gradient(90deg,var(--accent),#7c3aed);padding:10px 14px;border-radius:10px;color:#061221;font-weight:700}
+
+    /* hero */
+    .hero{padding:72px 0;display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center}
+    .hero h1{font-size:clamp(28px,5vw,44px);margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 20px}
+    .badges{display:flex;gap:10px;margin-bottom:18px}
+    .badge{background:var(--glass);padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+    .profile{display:flex;gap:16px;align-items:center}
+    .avatar{width:92px;height:92px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-size:13px}
+
+    /* services + portfolio */
+    section{padding:36px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));border:1px solid rgba(255,255,255,0.03)}
+    .service h3{margin:0 0 10px}
+
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .work{height:160px;border-radius:10px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+    .work::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.4))}
+    .work-title{position:absolute;left:12px;bottom:12px;font-weight:700}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:18px}
+    form{display:flex;flex-direction:column;gap:12px}
+    input,textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:8px;color:inherit}
+    button{padding:12px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+
+    footer{padding:28px 0;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid,.portfolio-grid{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+      nav ul{display:none}
+      .mobile-toggle{display:block}
+    }
+    @media (max-width:520px){
+      .grid,.portfolio-grid{grid-template-columns:1fr}
+    }
+
+    .mobile-toggle{display:none;background:transparent;border:0;color:inherit;font-size:20px}
+    .mobile-menu{display:none;padding:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:10px;margin-top:10px}
+    .show{display:block}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"><img src="https://i.postimg.cc/7PjgScjq/nano-banana-2025-09-07-T03-54-50-removebg-preview.png" alt="Salman logo" style="width:48px;height:48px;object-fit:cover;border-radius:8px"></div>
+        <div>
+          <div>Salman</div>
+          <div class="muted" style="font-size:13px">Web Design • Lead Generation • YouTube SEO</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="mobile-toggle" id="menuBtn">☰</button>
+        <ul id="navList">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#contact">Get a Quote</a>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#services">Services</a> • <a href="#portfolio">Portfolio</a> • <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="badges"><span class="badge">WordPress Expert</span><span class="badge">Lead Gen</span><span class="badge">YouTube SEO</span></div>
+        <h1>I grow your online presence — beautiful WordPress sites, lead generation & YouTube SEO</h1>
+        <p>I build conversion-focused websites for businesses and content creators. Below you can see services and samples of my work.</p>
+        <div style="display:flex;gap:12px;margin-top:18px">
+          <a class="cta" href="#contact">Hire me</a>
+          <a href="#portfolio" style="align-self:center">View work →</a>
+        </div>
+
+        <div class="card" style="margin-top:22px">
+          <div class="profile">
+            <div class="avatar"><img src="https://i.postimg.cc/7PjgScjq/nano-banana-2025-09-07-T03-54-50-removebg-preview.png" alt="Salman"></div>
+            <div>
+              <div style="font-weight:700">Salman</div>
+              <div class="muted" style="font-size:13px">Freelancer — Web & SEO Specialist</div>
+              <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">WordPress</span>
+                <span class="skill">YouTube SEO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Quick Info</h3>
+          <p class="muted">Available for remote projects. Typical WordPress delivery: 3–7 days depending on scope. I also create CRO-focused landing pages for lead generation.</p>
+          <div style="margin-top:10px">
+            <strong>Price starting:</strong>
+            <div class="muted">From $150 — contact for a custom quote</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <div class="grid" style="margin-top:14px">
+        <div class="service">
+          <h3>WordPress Website Design</h3>
+          <p class="muted">Custom themes, Elementor/Divi setups, responsive & SEO-friendly structure. I can deliver a working WordPress site or a static HTML template.</p>
+        </div>
+        <div class="service">
+          <h3>Lead Generation</h3>
+          <p class="muted">Conversion-optimized landing pages, forms integrated with email & CRM (Mailchimp, Pipedrive, Zapier), and A/B testing guidance.</p>
+        </div>
+        <div class="service">
+          <h3>YouTube SEO</h3>
+          <p class="muted">Keyword research for video topics, optimized titles & descriptions, chapters, tags, thumbnail advice, and VideoObject schema for rich results.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Recent Work</h2>
+      <div class="portfolio-grid" style="margin-top:12px">
+        <div class="work" style="background-image:url('https://picsum.photos/seed/1/800/600')"><div class="work-title">Business Site</div></div>
+        <div class="work" style="background-image:url('https://picsum.photos/seed/2/800/600')"><div class="work-title">SaaS Landing</div></div>
+        <div class="work" style="background-image:url('https://picsum.photos/seed/3/800/600')"><div class="work-title">YouTube Channel Brand</div></div>
+        <div class="work" style="background-image:url('https://picsum.photos/seed/4/800/600')"><div class="work-title">E‑commerce Theme</div></div>
+        <div class="work" style="background-image:url('https://picsum.photos/seed/5/800/600')"><div class="work-title">Landing for Lead Gen</div></div>
+        <div class="work" style="background-image:url('https://picsum.photos/seed/6/800/600')"><div class="work-title">Portfolio Revamp</div></div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+        <div class="card" style="flex:1;min-width:260px">“Fast delivery and traffic increased 3x after the landing page.” — Client A</div>
+        <div class="card" style="flex:1;min-width:260px">“Great YouTube SEO — our videos rank on first page for 2 keywords.” — Client B</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-grid" style="margin-top:14px">
+        <div>
+          <form id="contactForm">
+            <!-- Replace the action email at formsubmit.co or integrate with your backend/CRM -->
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="subject" placeholder="Subject" required>
+            <textarea id="message" rows="6" placeholder="Your message"></textarea>
+            <button id="submitBtn" style="background:linear-gradient(90deg,var(--accent),#7c3aed);color:#061221">Send Message</button>
+            <div id="formMsg" class="muted" style="font-size:13px;margin-top:6px"></div>
+          </form>
+        </div>
+        <aside>
+          <div class="card">
+            <h3>Get a free strategy call</h3>
+            <p class="muted">Share your website link or channel and I’ll suggest quick wins for design, lead capture and YouTube growth.</p>
+            <div style="margin-top:12px"><strong>Email:</strong> <span class="muted">youremail@example.com</span></div>
+            <div style="margin-top:6px"><strong>Location:</strong> <span class="muted">Dhaka, Bangladesh</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="muted">© <span id="year"></span> Salman — All rights reserved.</div>
+        <div class="muted">Follow: <a href="#">YouTube</a> • <a href="#">LinkedIn</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Small interactions: mobile menu toggle, form submission (example POST to formsubmit.co)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn && menuBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('show'));
+
+    // Simple form handling: replace the endpoint with your Formspree/Formsubmit or backend
+    const form = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const data = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+      formMsg.textContent = 'Sending...';
+      try{
+        // Example using formsubmit.co -- replace "you
